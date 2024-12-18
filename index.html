@@ -34,7 +34,10 @@
         }
         @font-face {
           font-family: "Inter";
-          src: url(./assets/fonts/Inter-VariableFont_opsz\wght.ttf);
+          src: url(./assets/fonts/Inter-VariableFont.ttf);
+        }
+        html {
+          @apply scroll-smooth;
         }
 
         h1,
@@ -90,14 +93,19 @@
           @apply text-accent-color;
         }
 
+        section {
+          @apply w-2/3 mx-auto;
+        }
+
         hr {
-          @apply h-px my-8 border-divider-color w-2/3;
+          @apply h-px my-8 border-divider-color w-full;
         }
       }
     </style>
   </head>
   <body class="bg-background-color">
     <header
+      id="home"
       class="flex justify-between px-12 py-5 border border-header-border-color"
     >
       <div><img src="./assets/img/6.png" alt="Logo" /></div>
@@ -156,17 +164,103 @@
           alt="Arrow"
         />
       </section>
-      <section class="flex flex-col justify-center items-center text-center">
+      <section
+        id="about"
+        class="flex flex-col justify-center items-center text-center"
+      >
         <hr class="align-top mb-24" />
         <h2 class="mb-6">Fashion for passion <br />& lifestyle</h2>
-        <p class="mx-96 px-72 mb-20">
+        <p class="px-72 mb-20">
           We formulate intentionally crafted supplements for thoughtful people
           like you – using only the highest quality ingredients at effective
           doses. Empowering you to take control of your wellness, look and feel
           great, and live a life brimming with energy.
         </p>
-        <button>Check My Works</button>
-        <hr class="align-baseline mt-40" />
+        <button><a href="#">Check My Works</a></button>
+        <hr class="align-baseline mt-40 mb-24" />
+      </section>
+      <section id="work" class="h-[170rem]">
+        <h2 class="w-32">Selected works</h2>
+        <div class="flex items-start justify-between w-full mb-16">
+          <div class="flex gap-10 items-end">
+            <hr class="w-52 border-t border-white ml-32" />
+            <p class="leading-5 w-2/5">
+              Creative work of natural source from. We select only those modern
+              works also my planet your products.
+            </p>
+          </div>
+          <button class="flex-shrink-0">View All Works</button>
+        </div>
+        <div class="relative">
+          <!-- Image 1 -->
+          <div
+            class="absolute w-[40rem] h-[55rem] top-0 left-0 overflow-hidden group"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/img/1.jpeg"
+              alt="Woman with an Earring Close Up"
+            />
+            <div
+              class="flex flex-col opacity-0 absolute top-10 left-10 group-hover:opacity-100 ease-in-out duration-500"
+            >
+              <img class="mb-2 w-6" src="./assets/img/18.png" alt="Arrow Up" />
+              <h5>DEVELOPMENT</h5>
+              <h3>Stefanie Brückler</h3>
+            </div>
+          </div>
+          <!-- Image 2 -->
+          <div
+            class="absolute w-[27.5rem] h-[37.5rem] top-60 right-0 overflow-hidden group"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/img/2.jpeg"
+              alt="Blonde Woman in Green Suit"
+            />
+            <div
+              class="flex flex-col opacity-0 absolute top-10 left-10 group-hover:opacity-100 ease-in-out duration-500"
+            >
+              <img class="mb-2 w-6" src="./assets/img/18.png" alt="Arrow Up" />
+              <h5>CREATIVE</h5>
+              <h3>Shelby Hypol</h3>
+            </div>
+          </div>
+          <!-- Image 3 -->
+          <div
+            class="absolute w-[27.5rem] h-[37.5rem] top-[88rem] left-0 overflow-hidden group"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/img/4.jpeg"
+              alt="Woman in Orange Suit "
+            />
+            <div
+              class="flex flex-col opacity-0 absolute top-10 left-10 group-hover:opacity-100 ease-in-out duration-500"
+            >
+              <img class="mb-2 w-6" src="./assets/img/18.png" alt="Arrow Up" />
+              <h5>WEB DESIGN</h5>
+              <h3>Visual Identity</h3>
+            </div>
+          </div>
+          <!-- Image 4 -->
+          <div
+            class="absolute w-[40rem] h-[55rem] top-[72rem] right-0 overflow-hidden group"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/img/5.jpeg"
+              alt="Woman with Smokey Eyes in Parka Close Up"
+            />
+            <div
+              class="flex flex-col opacity-0 absolute top-10 left-10 group-hover:opacity-100 ease-in-out duration-500"
+            >
+              <img class="mb-2 w-6" src="./assets/img/18.png" alt="Arrow Up" />
+              <h5>BRANDING</h5>
+              <h3>Etienne Godiard</h3>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer></footer>
