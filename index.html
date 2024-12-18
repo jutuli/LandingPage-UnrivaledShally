@@ -42,6 +42,7 @@
         h3,
         h4,
         h5,
+        a,
         button {
           @apply text-white;
         }
@@ -62,13 +63,22 @@
         h5 {
           @apply font-inter;
         }
+
+        a {
+          @apply px-1;
+        }
+        a:hover {
+          @apply text-accent-color;
+        }
       }
     </style>
   </head>
   <body class="bg-background-color">
-    <header class="flex justify-between">
+    <header
+      class="flex justify-between px-12 py-5 border border-header-border-color"
+    >
       <div><img src="./assets/img/6.png" alt="Logo" /></div>
-      <nav>
+      <nav class="flex gap-9">
         <a href="#">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#work">WORK</a>
