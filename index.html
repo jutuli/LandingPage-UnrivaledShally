@@ -47,10 +47,6 @@
           @apply text-white;
         }
 
-        p {
-          @apply text-text-color;
-        }
-
         h1,
         h2,
         h3,
@@ -80,10 +76,10 @@
           @apply text-[1.25rem] leading-loose;
         }
         p {
-          @apply text-[1.05rem] leading-normal;
+          @apply text-[1.05rem] leading-7 text-text-color;
         }
         button {
-          @apply text-[6.25rem] leading-tight;
+          @apply text-[0.95rem] leading-7;
         }
 
         a {
@@ -117,7 +113,7 @@
     </header>
     <main>
       <section
-        class="hero flex flex-col items-center w-full h-[calc(100vh-82px)] relative bg-[url('./assets/img/19.png')] bg-repeat-x bg-top -z-20"
+        class="flex flex-col items-center w-full h-[calc(100vh-82px)] relative bg-[url('./assets/img/19.png')] bg-repeat-x bg-top -z-20"
       >
         <div class="mt-40 relative z-10 text-center">
           <h1>Unrivaled <br />Shally</h1>
@@ -160,8 +156,17 @@
           alt="Arrow"
         />
       </section>
-      <section>
-        <hr class="align-baseline" />
+      <section class="flex flex-col justify-center items-center text-center">
+        <hr class="align-top mb-24" />
+        <h2 class="mb-6">Fashion for passion <br />& lifestyle</h2>
+        <p class="mx-96 px-72">
+          We formulate intentionally crafted supplements for thoughtful people
+          like you – using only the highest quality ingredients at effective
+          doses. Empowering you to take control of your wellness, look and feel
+          great, and live a life brimming with energy.
+        </p>
+        <button>Check My Works</button>
+        <hr class="align-baseline mt-80" />
       </section>
     </main>
     <footer></footer>
