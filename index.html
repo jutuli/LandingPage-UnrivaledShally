@@ -8,18 +8,82 @@
     <script>
       tailwind.config = {
         theme: {
-          extend: {},
+          extend: {
+            colors: {
+              white: "#FFFFFF",
+              "text-color": "#999999",
+              "accent-color": "#E8BF96",
+              "btn-border-color": "#3C3636",
+              "divider-color": "#3F3A36",
+              "header-border-color": "#333337",
+              "background-color": "#272422",
+            },
+            fontFamily: {
+              "new-york": ["New York", "Times New Roman", "serif"],
+              inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
+            },
+          },
         },
       };
     </script>
     <style type="text/tailwindcss">
       @layer base {
+        @font-face {
+          font-family: "New York";
+          src: url(./assets/fonts/NewYork\ PERSONAL\ USE.otf);
+        }
+        @font-face {
+          font-family: "Inter";
+          src: url(./assets/fonts/Inter-VariableFont_opsz\wght.ttf);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        button {
+          @apply text-white;
+        }
+
+        p {
+          @apply text-text-color;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          @apply font-new-york;
+        }
+
+        p,
+        button,
+        h5 {
+          @apply font-inter;
+        }
       }
     </style>
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="bg-background-color">
+    <header class="flex justify-between">
+      <div><img src="./assets/img/6.png" alt="Logo" /></div>
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#service">SERVICE</a>
+        <a href="#blog">BLOG</a>
+        <a href="#award">AWARD</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Unrivaled Shally</h1>
+        <h2>A Creative <span>Fashion</span> Designer</h2>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
